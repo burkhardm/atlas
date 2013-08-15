@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+
+atlas - random channel matrix - website version
+--------------------------------------------------------------------------------
+This html website has been developed by Martin Burkhard for "atlas" created by Nicolas Romanacci.  
+Presented during the "ars dilettanti" exhibition, Germany, 15 - 16 March 2013. 
+	           __   .__             
+	 _____   _/  |_ |  |  _____     ______  
+	 \__  \  \   __\|  |  \__  \   /  ___/  
+	  / __ \_ |  |  |  |__ / __ \_ \___ \   
+	 (____  / |__|  |____/(____  //____  >  
+	      \/                   \/      \/  
+Videos
+--------------------------------------------------------------------------------
+Videos are available on Youtube: http://www.youtube.com/watch?v=Ou5xSzix4VQ&list=PL6F73FC87598524CB
+
+Credits
+--------------------------------------------------------------------------------
+Author: Martin Burkhard <martin.burkhard@gmail.com>
+About Nicolas Romanacci: http://www.celesteprize.com/nicolasrom
+About Ars Dilettanti: http://arsdilettanti.de   
+	
+License
+--------------------------------------------------------------------------------
+The MIT License (MIT), http://opensource.org/licenses/MIT
+
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>&raquo;atlas&laquo; random channels</title>
+		<style type="text/css">
+			html { color: #000; background: black; min-height: 100%; }
+			body { background-color:#000000; }
+		</style>
+		<script type="text/javascript">
+			function onLoad() {
+				loadRandomNonRepeating(27, 9);
+				
+				var viewFullScreen = document.getElementById("view-fullscreen");				
+    			if (viewFullScreen) {
+        			viewFullScreen.addEventListener("click", function () {
+           				var docElm = document.documentElement;
+            			if (docElm.requestFullscreen) {
+             		   		docElm.requestFullscreen();
+            			}
+            			else if (docElm.mozRequestFullScreen) {
+            			    docElm.mozRequestFullScreen();
+            			}
+            			else if (docElm.webkitRequestFullScreen) {
+            		 	   docElm.webkitRequestFullScreen();
+            			}
+       		 		}, false);
+				}
+    		}
+			function loadSource() {
+				loadVideo("video1", 0, 0);	
+				loadVideo("video2", 1, 0);	
+				loadVideo("video3", 2, 0);	
+				loadVideo("video4", 3, 0);	
+				loadVideo("video5", 4, 0);	
+				loadVideo("video6", 5, 0);	
+				loadVideo("video7", 6, 0);	
+				loadVideo("video8", 7, 0);	
+				loadVideo("video9", 8, 0);	
+    		}
+			function loadRandomSource(max,num_iframes) {
+				for (i = 1; i <= num_iframes; i++) {
+        			loadVideo("video" + i, random(0,max-1), random(0,30));
+    			}
+    		}
+    		function loadRandomNonRepeating(max, num_iframes) {
+				var nrs = new Array();
+				for(i=0; i<= max-1; i++) {
+					nrs[i] = i;
+				}
+				nrs.sort(function() {return 0.5 - Math.random()});
+				for (j = 1; j <= num_iframes; j++) {
+        			loadVideo("video" + j, nrs[j-1], random(0,30));
+    			}
+    		}
+			function loadVideo(iframe_id, index, offset){
+				document.getElementById(iframe_id).src = 'http://www.youtube.com/embed?listType=playlist&list=PL6F73FC87598524CB&autoplay=1&controls=0&disablekb=1&loop=1&index=' + index + "&start=" + offset;
+			}
+			function random(min,max) {
+				return Math.floor(Math.random() * max) + min;
+			}
+		</script>
+    </head>
+    <body onload="onLoad()">
+     	<button id="view-fullscreen">Fullscreen</button>
+        <div class="container" style="width:1024Px; margin:0 auto; padding-top:50Px;">
+    	<span style="display:block; padding-top:50Px;">
+    		<iframe id="video1" width="320" height="180" frameborder="0" allowfullscreen></iframe>
+    		<iframe id="video2" width="320" height="180" frameborder="0" allowfullscreen></iframe>
+    		<iframe id="video3" width="320" height="180" frameborder="0" allowfullscreen></iframe>
+ 		</span>
+ 		<span style="display:block; padding-top:50Px;"> 
+ 			<iframe id="video4" width="320" height="180" frameborder="0" allowfullscreen></iframe>
+    		<iframe id="video5" width="320" height="180" frameborder="0" allowfullscreen></iframe>
+    		<iframe id="video6" width="320" height="180" frameborder="0" allowfullscreen></iframe>
+ 		</span>
+ 		<span style="display:block; padding-top:50Px;"> 
+    		<iframe id="video7" width="320" height="180" frameborder="0" allowfullscreen></iframe>
+    		<iframe id="video8" width="320" height="180" frameborder="0" allowfullscreen></iframe>
+    		<iframe id="video9" width="320" height="180" frameborder="0" allowfullscreen></iframe>
+ 		</span>
+		</div>
+	</body>
+</html>
