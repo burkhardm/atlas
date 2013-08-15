@@ -18,12 +18,13 @@ The "atlas" - random channel matrix - randomly selects nine videos from a list a
 Videos
 --------------------------------------------------------------------------------
 Videos are available on Youtube: http://www.youtube.com/watch?v=Ou5xSzix4VQ&list=PL6F73FC87598524CB
+
 Note: The openFrameworks source code does not contain the original video files of Nicolas Romanacci. In case you are interested in the video contents, please contact Nicolas Romanacci and/or Martin Burkhard.
 
 Credits
 --------------------------------------------------------------------------------
-Application Author: Martin Burkhard <martin.burkhard@gmail.com>
-About Nicolas Romanacci: http://www.celesteprize.com/nicolasrom
+Application Author: Martin Burkhard <martin.burkhard@gmail.com><br>
+About Nicolas Romanacci: http://www.celesteprize.com/nicolasrom<br>
 About Ars Dilettanti: http://arsdilettanti.de   
 	
 License
