@@ -1,7 +1,7 @@
 &raquo;atlas&laquo; - random channel matrix
 ====
 
-The html website and [openFrameworks](www.openframeworks.cc) application have been developed by Martin Burkhard for [&raquo;atlas&laquo;](http://arsdilettanti.de/content/nicolas-romanacci) by Nicolas Romanacci.  
+The html website and [openFrameworks](www.openframeworks.cc) application have been developed for [&raquo;atlas&laquo;](http://arsdilettanti.de/content/nicolas-romanacci) by Nicolas Romanacci.  
 [&raquo;ars dilettanti&laquo;](http://arsdilettanti.de) exhibition, Germany, 15 - 16 March 2013.
 
 	           __   .__             
